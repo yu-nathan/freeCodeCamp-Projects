@@ -1,0 +1,239 @@
+<!-- HTML page for Survey Form project -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>League of Legends Team Tryout Form</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="header__title">
+        League of Legends Team Tryout Form
+      </h1>
+      <p id="description" class="header__form-description">
+        Thank you for considering our team!
+      </p>
+    </header>
+    <form id="survey-form" class="form">
+      <div class="form__group">
+        <label id="name-label" 
+            class="form__label form__group--required" for="name">
+          Name
+        </label>
+        <input type="text"
+            id="name"
+            class="form__control"
+            name="name"
+            placeholder="Enter your name"
+            required
+        />
+      </div>
+
+      <div class="form__group">
+        <label id="email-label"
+            class="form__label form__group--required" for="email">
+          Email
+        </label>
+        <input type="email"
+            id="email"
+            class="form__control"
+            name="email"
+            placeholder="Enter your email"
+            required
+        />
+      </div>
+
+      <div class="form__group">
+        <label id="number-label"
+            class="form__label form__group--required" for="age">
+          Age
+        </label>
+        <input type="number"
+            id="number"
+            class="form__control"
+            name="number"
+            min="16"
+            max="99"
+            placeholder="Age"
+            required
+        />
+      </div>
+
+      <div class="form__group">
+        <label class="form__label form__group--required" for="summoner-name">
+          What is your summoner name?
+        </label>
+        <input type="text"
+            id="summoner-name"
+            class="form__control"
+            name="summoner-name"
+            placeholder="Summoner name"
+            required
+        />
+      </div>
+      
+      <div class="form__group">
+        <label class="form__label form__group--required" for="rank">
+          What is your peak rank, and in what season?
+        </label>
+        <input type="text"
+            id="rank"
+            class="form__control"
+            name="rank"
+            placeholder="Rank and season"
+            required
+        />
+      </div>
+
+      <div class="form__group">
+        <label class="form__label form__group--required" for="role">
+          What is your preferred role?
+        </label>
+        <select id="dropdown" class="form__control" name="role" required>
+          <option disabled selected value>Select role</option>
+          <option value="top">Top</option>
+          <option value="jungle">Jungle</option>
+          <option value="mid">Mid</option>
+          <option value="botlane">Botlane</option>
+          <option value="support">Support</option>
+        </select>
+      </div>
+
+      <div class="form__group">
+        <label class="form__label form__group--required" for="role">
+          What is your secondary role?
+        </label>
+        <select class="form__control" name="role" required>
+          <option disabled selected value>Select role</option>
+          <option value="top">Top</option>
+          <option value="jungle">Jungle</option>
+          <option value="mid">Mid</option>
+          <option value="botlane">Botlane</option>
+          <option value="support">Support</option>
+        </select>
+      </div>
+
+      <div class="form__group">
+        <p class="form__question form__group--required">
+          How many champions do you comfortably play?
+        </p>
+        <label class="form__label">
+          <input type="radio"
+              class="form__control-choice"
+              name="comfortable-champions"
+              value="1"
+              required
+          />1
+        </label>
+        <label class="form__label">
+          <input type="radio"
+              class="form__control-choice"
+              name="comfortable-champions"
+              value="2"
+              required
+          />2
+        </label>
+        <label class="form__label">
+          <input type="radio"
+              class="form__control-choice"
+              name="comfortable-champions"
+              value="3"
+              required
+          />3
+        </label>
+        <label class="form__label">
+          <input type="radio"
+              class="form__control-choice"
+              name="comfortable-champions"
+              value="5"
+              required
+          />5
+        </label>
+        <label class="form__label">
+          <input type="radio"
+              class="form__control-choice"
+              name="comfortable-champions"
+              value="5+"
+              required
+          />5+
+        </label>
+      </div>
+
+      <div class="form__group">
+        <p class="form__label form__group--required">
+          Please select all of the days that you are available for tryouts.
+        </p>
+        <label class="form__label">
+          <input type="checkbox"
+              class="form__control-choice"
+              name="days-available"
+              value="Monday"
+          />Monday
+        </label>
+        <label class="form__label">
+          <input type="checkbox"
+              class="form__control-choice"
+              name="days-available"
+              value="Tuesday"
+          />Tuesday
+        </label>
+        <label class="form__label">
+          <input type="checkbox"
+              class="form__control-choice"
+              name="days-available"
+              value="Wednesday"
+          />Wednesday
+        </label>
+        <label class="form__label">
+          <input type="checkbox"
+              class="form__control-choice"
+              name="days-available"
+              value="Thursday"
+          />Thursday
+        </label>
+        <label class="form__label">
+          <input type="checkbox"
+              class="form__control-choice"
+              name="days-available"
+              value="Friday"
+          />Friday
+        </label>
+        <label class="form__label">
+          <input type="checkbox"
+              class="form__control-choice"
+              name="days-available"
+              value="Saturday"
+          />Saturday
+        </label>
+        <label class="form__label">
+          <input type="checkbox"
+              class="form__control-choice"
+              name="days-available"
+              value="Sunday"
+          />Sunday
+        </label>
+      </div>
+
+      <div class="form__group">
+        <label class="form__label" for="extra-info">
+          Is there anything else that you would like to tell us?
+        </label>
+        <textarea
+            id="extra-info"
+            class="form__control form__control--resize-disabled"
+            rows="2"
+            cols="33">
+        </textarea>
+      </div>
+
+      <div class="form__group">
+        <button type="submit" id="submit" class="form__button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
