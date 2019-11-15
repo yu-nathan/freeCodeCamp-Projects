@@ -1,0 +1,224 @@
+<!-- HTML page for Technical Documentation Page project -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Python Tutorial</title>
+  
+  <script src="https://kit.fontawesome.com/b2479ba053.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a id="top"></a>
+
+  <!-- START NAVBAR SECTION -->
+
+  <nav id="navbar" class="nav-bar">
+    <div class="nav-bar__links">
+      <header class="nav-bar__header">
+        The Python Tutorial
+      </header>
+      <a class="nav-bar__link nav-link" href="#Introduction">
+        Introduction
+      </a>
+      <a class="nav-bar__link nav-link" href="#Using_the_Python_Interpreter">
+        Using the Python Interpreter
+      </a>
+      <a class="nav-bar__link nav-link" href="#Argument_Passing">
+        Argument Passing
+      </a>
+      <a class="nav-bar__link nav-link" href="#Interactive_Mode">
+        Interactive Mode
+      </a>
+      <a class="nav-bar__link nav-link" href="#Source_Code_Encoding">
+        Source Code Encoding
+      </a>
+      <a class="nav-bar__link nav-link" href="#Reference">
+        Reference
+      </a>
+    </div>
+  </nav>
+
+  <!-- END NAVBAR SECTION -->   
+
+  <!-- START TECHNICAL SECTION -->
+
+  <main id="main-doc" class="technical-section">
+    <header class="header">
+      <h1 class="header__title">The Python Tutorial</h1>
+    </header>
+    <section id="Introduction" class="documentation main-section">
+      <header id="introduction" class="documentation__title">
+        Introduction
+      </header>
+      <p class="documentation__details">
+        Python is an easy to learn, powerful programming language. It has
+        efficient high-level data structures and a simple but effective
+        approach to object-oriented programming. Python’s elegant syntax and
+        dynamic typing, together with its interpreted nature, make it an ideal
+        language for scripting and rapid application development in many areas
+        on most platforms.
+      </p>
+      <p class="documentation__details">
+        The Python interpreter and the extensive standard library are freely
+        available in source or binary form for all major platforms from the
+        Python Web site, https://www.python.org/, and may be freely
+        distributed. The same site also contains distributions of and
+        pointers to many free third party Python modules, programs and
+        tools, and additional documentation.
+      </p>
+      <p class="documentation__details">
+        This tutorial introduces the reader informally to the basic concepts
+        and features of the Python language and system. It helps to have a
+        Python interpreter handy for hands-on experience, but all examples are
+        self-contained, so the tutorial can be read off-line as well.
+      </p>
+      <p class="documentation__details">
+        This tutorial does not attempt to be comprehensive and cover every
+        single feature, or even every commonly used feature. Instead, it
+        introduces many of Python’s most noteworthy features, and will give
+        you a good idea of the language’s flavor and style. After reading it,
+        you will be able to read and write Python modules and programs, and
+        you will be ready to learn more about the various Python library
+        modules described in The Python Standard Library.
+      </p>
+    </section>
+    <section id="Using_the_Python_Interpreter" class="documentation main-section">
+      <header id="using-interpreter" class="documentation__title">
+        Using the Python Interpreter
+      </header>
+      <p class="documentation__details">
+        The Python interpreter is usually installed as
+        <span class="highlight">/usr/local/bin/python3.8</span>
+        on those machines where it is available; putting /usr/local/bin in
+        your Unix shell’s search path makes it possible to start it by typing
+        the command: <code class="code">python3.8</code> to the shell. Since
+        the choice of the directory where the interpreter lives is an
+        installation option, other places are possible; check with your local
+        Python guru or system administrator. (E.g.,
+        <span class="highlight">/usr/local/python</span> is a popular
+        alternative location.)
+      </p>
+      <p class="documentation__details">
+        Typing an end-of-file character (Control-D on Unix, Control-Z on
+        Windows) at the primary prompt causes the interpreter to exit with a
+        zero exit status. If that doesn’t work, you can exit the interpreter
+        by typing the following command: <span class="highlight">quit()</span>.
+      </p>
+    </section>
+    <section id="Argument_Passing" class="documentation main-section">
+      <header id="arg-passing" class="documentation__title">
+        Argument Passing
+      </header>
+      <p class="documentation__details">
+        When known to the interpreter, the script name and additional
+        arguments thereafter are turned into a list of strings and assigned to
+        the <span class="highlight">argv</span> variable in the
+        <span class="highlight">sys</span> module. You can access this list by
+        executing <span class="highlight">import sys</span>. The length of the
+        list is at least one; when no script and no arguments are given,
+        <span class="highlight">sys.argv[0]</span> is an empty string. When
+        the script name is given as <span class="highlight">'-'</span>
+        (meaning standard input), <span class="highlight">sys.argv[0]</span>
+        is set to <span class="highlight">'-'</span>. When -c command is used,
+        <span class="highlight">sys.argv[0]</span> is set to
+        <span class="highlight">'-c'</span>. When -m module is used,
+        <span class="highlight">sys.argv[0]</span> is set to the full name of
+        the located module. Options found after -c command or -m module are
+        not consumed by the Python interpreter’s option processing but left in
+        <span class="highlight">sys.argv</span> for the command or module to
+        handle.
+      </p>
+    </section>
+    <section id="Interactive_Mode" class="documentation main-section">
+      <header id="interactive-mode" class="documentation__title">
+        Interactive Mode
+      </header>
+      <p class="documentation__details">
+        When commands are read from a tty, the interpreter is said to be in
+        interactive mode. In this mode it prompts for the next command with
+        the primary prompt, usually three greater-than signs
+        (<span class="highlight">>>></span>); for continuation lines it
+        prompts with the secondary prompt, by default three dots
+        (<span class="highlight">...</span>). The interpreter prints a welcome
+        message stating its version number and a copyright notice before
+        printing the first prompt:
+        <code class="code"
+          >$ python3.8
+<!--   -->Python 3.8 (default, Sep 16 2015, 09:25:04)
+<!--   -->[GCC 4.8.2] on linux
+<!--   -->Type "help", "copyright", "credits" or "license" for more information.
+<!--   -->>>></code
+          >
+        Continuation lines are needed when entering a multi-line construct. As
+        an example, take a look at this if statement:
+        <code class="code"
+          >>>> the_world_is_flat = True
+<!--   -->>>> if the_world_is_flat:
+<!--   -->...     print("Be careful not to fall off!")
+<!--   -->...
+<!--   -->Be careful not to fall off!</code
+        >
+        For more on interactive mode, see Interactive Mode.
+      </p>
+    </section>
+    <section id="Source_Code_Encoding" class="documentation main-section">
+      <header id="source-code-encoding" class="documentation__title">
+        Source Code Encoding
+      </header>
+      <p class="documentation__details">
+        By default, Python source files are treated as encoded in UTF-8. In that
+        encoding, characters of most languages in the world can be used
+        simultaneously in string literals, identifiers and comments — although
+        the standard library only uses ASCII characters for identifiers, a
+        convention that any portable code should follow. To display all these
+        characters properly, your editor must recognize that the file is UTF-8,
+        and it must use a font that supports all the characters in the file.
+      </p>
+      <p class="documentation__details">
+        To declare an encoding other than the default one, a special comment
+        line should be added as the first line of the file. The syntax is as
+        follows:
+        <code class="code code--italic"># -*- coding: encoding -*-</code>
+        where encoding is one of the valid codecs supported by Python.
+      </p>
+      <p class="documentation__details">
+        For example, to declare that Windows-1252 encoding is to be used, the
+        first line of your source code file should be:
+        <code class="code code--italic"># -*- coding: cp1252 -*-</code>
+      </p>
+      <p class="documentation__details">
+        One exception to the first line rule is when the source code starts
+        with a UNIX “shebang” line. In this case, the encoding declaration
+        should be added as the second line of the file. For example:
+        <code class="code code--italic"
+          >#!/usr/bin/env python3
+<!--   --># -*- coding: cp1252 -*-</code
+        >
+      </p>
+    </section>
+    <section id="Reference" class="documentation main-section">
+      <header id="reference" class="documentation__title">
+        Reference
+      </header>
+      <p class="documentation__details">
+        All of the documentation in this page is taken from
+        <a class="documentation__link"
+            href="https://docs.python.org/3/tutorial/index.html"
+            target="_blank">
+            Python</a
+        >.
+      </p>
+      <ul class="documentation__list">
+        <li class="documentation_list-item">Lorem ipsum</li>
+        <li class="documentation_list-item">Lorem ipsum</li>
+        <li class="documentation_list-item">Lorem ipsum</li>
+        <li class="documentation_list-item">Lorem ipsum</li>
+        <li class="documentation_list-item">Lorem ipsum</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- END DOCUMENTATION SECTION -->
+</body>
+</html>
