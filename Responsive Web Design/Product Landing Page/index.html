@@ -1,0 +1,150 @@
+<!-- HTML page for Survey Form project -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VPN</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header id="header" class="header">
+    <a href="#top">
+      <img id="header-img" class="header__img"
+          src="https://image.flaticon.com/icons/png/512/1689/1689389.png"
+          alt="vpn"
+      />
+    </a>
+
+    <nav id="nav-bar" class="header__nav-bar">
+      <a class="nav-link header__nav-link" href="#video">
+        How it Works
+      </a>
+      <a class="nav-link header__nav-link" href="#features">
+        Features
+      </a>
+      <a class="nav-link header__nav-link" href="#pricing">
+        Pricing
+      </a>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <section class="hero">
+      <h1 id="title" class="hero__title">VPN</h1>
+      <p id="description" class="hero__description">
+        Protect your privacy as you surf the internet!
+      </p>
+
+      <form id="form" 
+          class="form" 
+          action="https://www.freecodecamp.org/email-submit">
+        <input type="email"
+            id="email"
+            class="form__control"
+            name="email"
+            placeholder="Enter your email address"
+            required
+        />
+        <input type="submit"
+            id="submit"
+            class="button"
+            value="Get more information!"
+        />
+      </form>
+    </section>
+
+    <div class="product">
+      <iframe id="video"
+        class="video"
+        src="https://www.youtube.com/embed/4-GZnXcXzGw"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+      <section id="features" class="features">
+        <div class="grid">
+          <div icon class="icon">
+            <i class="glyphicon glyphicon-road"></i>
+          </div>
+          <div feature class="feature">
+            <h2 class="feature__name">Use anywhere</h2>
+            <p class="feature__desc">
+              With our advanced and premium mobile app, you can use VPN anywhere
+              anytime, to protect your privacy.
+            </p>
+          </div>
+        </div>
+        <div class="grid">
+          <div icon class="icon">
+            <i class="glyphicon glyphicon-eye-close"></i>
+          </div>
+          <div feature class="feature">
+            <h2 class="feature__name">24 hour support</h2>
+            <p class="feature__desc">
+              Our customer support team is here for you 24 hours, 7 days a week
+              to ensure that your data is always kept private.
+            </p>
+          </div>
+        </div>
+        <div class="grid">
+          <div icon class="icon">
+            <i class="glyphicon glyphicon-sunglasses"></i>
+          </div>
+          <div feature class="feature">
+            <h2 class="feature__name">Quality Assurance</h2>
+            <p class="feature__desc">
+              Our product has been field tested for over 5 years, and is
+              constantly improving to make use of the newest technologies and
+              is trusted by more than 5 million customers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div product-plan class="product-plan">
+          <h2 class="product-plan__name">Basic</h2>
+          <p class="product-plan__price">$Lorem ipsum.</p>
+          <ol class="product-plan__features">
+            <li class="product-plan__feature">Lorem ipsum.</li>
+            <li class="product-plan__feature">Lorem ipsum.</li>
+            <li class="product-plan__feature">Lorem ipsum.</li>
+          </ol>
+          <button class="button">Select</button>
+        </div>
+        <div product-plan class="product-plan">
+          <h2 class="product-plan__name">Premium</h2>
+          <p class="product-plan__price">$Lorem ipsum.</p>
+          <ol class="product-plan__features">
+            <li class="product-plan__feature">Lorem ipsum.</li>
+            <li class="product-plan__feature">Lorem ipsum.</li>
+            <li class="product-plan__feature">Lorem ipsum.</li>
+          </ol>
+          <button class="button">Select</button>
+        </div>
+        <div product-plan class="product-plan">
+          <h2 class="product-plan__name">Premium+</h2>
+          <p class="product-plan__price">$Lorem ipsum.</p>
+          <ol class="product-plan__features">
+            <li class="product-plan__feature">Lorem ipsum.</li>
+            <li class="product-plan__feature">Lorem ipsum.</li>
+            <li class="product-plan__feature">Lorem ipsum.</li>
+          </ol>
+          <button class="button">Select</button>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__link"><a href="#">Privacy</a></li>
+        <li class="footer__link"><a href="#">Terms</a></li>
+        <li class="footer__link"><a href="#">Contact</a></li>
+      </ul>
+      <p class="footer__copyright">Copyright 3000, VPN</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+/* CSS style sheet for Product Landing Page project */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-blue-gray: hsl(186, 21%, 62%);
+  --color-blue-green: hsl(181, 41%, 42%);
+}
+
+html {
+  font-size: 62.5%;
+  min-width: 100%;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8em;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #f1e0b0;
+  min-width: 100%;
+  margin: 0;
+  padding: 111px 0 0 0;
+  background: var(--color-blue-gray);
+}
+
+.wrapper {
+  position: relative;
+  min-width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  background: var(--color-blue-green);
+  margin: 0 auto;
+  z-index: 10;
+  border-bottom: 2px solid #fff;
+}
+
+.header__img {
+  height: 30px;
+  margin: 1em;
+}
+
+.header__nav-bar {
+  font-size: 1.25em;
+}
+
+.header__nav-bar .header__nav-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.header__nav-link {
+  margin-right: 1em;
+  padding: auto 0;
+}
+
+@media (max-width: 650px) {
+  .header__nav-bar {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .header__nav-link {
+    display: flex;
+  }
+}
+
+.hero__title {
+  font-size: 3em;
+  margin: 0 auto 0;
+}
+
+.hero__description {
+  font-style: italic;
+  font-weight: 200;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f1cdb0ce;
+  background-clip: padding-box;
+  width: 70%;
+  margin: 2em auto 5em;
+  padding: 1em;
+  border-radius: 0.4em;
+}
+
+.form__control {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  width: 100%;
+  padding: 0.375em 0.75em;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 0.25em;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form__control:focus {
+  border-color: #33bbbbce;
+  outline: 0;
+  box-shadow: 0 0 0 0.05em #08a1a1be;
+}
+
+.button {
+  color: #495057;
+  padding: 0.25em 0.5em;
+  background: #f1cdb0;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+.button:hover {
+  background-color: #e6ad81;
+  transition: background-color ease-in-out 0.5s;
+}
+
+.video {
+  width: 75%;
+  height: 500px;
+}
+
+.grid {
+  display: flex;
+}
+
+.features {
+  margin: 5em 0;
+}
+
+.icon {
+  font-size: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: #d4ddf7;
+}
+
+@media (max-width: 650px) {
+  .icon {
+    font-size: 2.5em;
+    align-items: flex-end;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 0.75em;
+  border-left: 1px solid #fff;
+  text-align: left;
+}
+
+@media (max-width: 650px) {
+  .feature {
+    margin: 2em 0;
+  }
+}
+
+.feature__name {
+  font-weight: 500;
+  color: hsl(44, 70%, 70%);
+}
+
+.pricing {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0
+}
+
+.product-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ced4da;
+  width: calc(100%  / 3);
+  margin: 0 1em;
+  padding: 1.5em 2em;
+  border-radius: 0.25em;
+}
+
+@media (max-width: 650px) {
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-plan {
+    width: 80%;
+    margin: 1em;
+  }
+
+  .product-plan__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.product-plan__name {
+  border-bottom: 1px solid #ced4da;
+}
+
+.product-plan__price {
+  font-size: 1.2em;
+}
+
+.product-plan__features {
+  align-self: center;
+}
+
+.footer {
+  width: 100%;
+  margin: 0;
+  padding-right: 0.5em;
+  background: #ddd;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5em 0.25em;
+  margin: 0.3em 0.5em 0;
+  text-decoration: none;
+}
+
+.footer__link a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  text-align: right;
+  color: #444;
+  padding: 0 0.3em 1em 0;
+  margin: -1em 0.5em 0em 0;
+}
