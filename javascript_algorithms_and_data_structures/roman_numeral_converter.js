@@ -3,6 +3,7 @@ function convertToRoman(num) {
   if (typeof num != 'number') {
      return undefined;
   }
+
   // array mapping different numerals to their Roman symbols
   let romanTable = [
     {
@@ -24,10 +25,12 @@ function convertToRoman(num) {
         'one': 'M',
     }
   ];
+
   // split the number string into digits, and then reverse to haves ones place
   // first
   let digitArray = num.toString().split('').reverse();
-  //
+  
+  // for each digits place, it is converted then prepended to the string
   return digitArray
      .reduce((prev, curr, pos) => {
          return (romanNumeralFormula(curr, romanTable[pos]).concat(prev));
