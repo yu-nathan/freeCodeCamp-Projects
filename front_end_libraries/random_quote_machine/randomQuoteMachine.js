@@ -1,0 +1,1 @@
+/* JavaScript code for Random Quote Machine project */
