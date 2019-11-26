@@ -1,0 +1,107 @@
+/* CSS style sheet for Random Quote Machine project */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-white: #f2f6f5;
+  --color-white-hover: #e6e6e6;
+  --color-pink: #eeaba2;
+  --color-blue: #00aced;
+  --color-periwinkle: #aebbe4;
+  --color-gray: #303841;
+  --color-black: #000;
+  --color-code-green: #0f0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
+  color: var(--color-white);
+  background: var(--color-gray);
+  height: 100vh;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-box {
+  font-size: 3rem;
+  border-radius: 1rem;
+  padding: 5rem;
+  background: var(--color-pink);
+  transform: scaleX(1);
+  transform-origin: 0% 0%;
+  transition: transform 500ms cubic-bezier(.19,.24,1,.14);
+  color: var(--color-black);
+  width: 500px;
+}
+
+.quote-box__author {
+  font-size: 2.5rem;
+  text-align: end;
+  color: var(--color-white);
+}
+
+.quote-box--animate-out {
+  transform: scaleX(0);
+  transform-origin: 0% 0%;
+  transition: transform 500ms cubic-bezier(.19,.24,1,.14);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.button {
+  font-size: 1.5rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--color-white-hover);
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--color-blue);
+}
+
+.footer {
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer__link {
+  color: var(--color-white);
+  text-decoration: none;
+}
