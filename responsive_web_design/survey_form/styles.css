@@ -23,7 +23,7 @@ body {
   line-height: 1.4;
   color: #f1e0b0;
   margin: 0;
-  background: linear-gradient(35deg, var(--color-blue-green), 
+  background: linear-gradient(35deg, var(--color-blue-green),
       var(--color-blue-gray));
 }
 
@@ -35,7 +35,7 @@ body {
 
 .header__title {
   font-size: 2em;
-  margin: 1.5em auto -0.5em;
+  margin: 0.5em auto -0.5em;
 }
 
 .header__form-description {
@@ -50,8 +50,8 @@ body {
   border: 1px solid #f1cdb0ce;
   background-clip: padding-box;
   width: 70%;
-  margin: 2em auto 2em;
-  padding: 1em;
+  margin: 0 auto 2em;
+  padding: 2em;
   border-radius: 0.4em;
 }
 
